@@ -1,0 +1,30 @@
+.cabecalho{
+    background-image: linear-gradient(to right,white,#88e4ff);
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo{
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.menu{
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.campeonatos-cadastrados{
+    margin: 10px auto auto auto;
+}
+
+.formulario-campeonato{
+    margin: 10px auto auto auto;
+}
