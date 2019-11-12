@@ -1,15 +1,25 @@
 import React, {Component} from 'react';
 import {Nav} from 'react-bootstrap';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Campeonato from "../pages/Campeonatos";
 
 class MenuComponent extends Component {
 
     render() {
         return (
-            <Nav defaultActiveKey="/home" className="flex-sm-column">
-                <Nav.Link href="/home">Home</Nav.Link>
-                <Nav.Link eventKey="link-1">Campeonatos</Nav.Link>
-                <Nav.Link eventKey="link-2">Jogos</Nav.Link>
-            </Nav>
+            <Router>
+                <Nav className="flex-sm-column">
+                    <Link className={"nav-link"} to={'/'}>Home</Link>
+                    <Link className={"nav-link"} to={'/campeonatos'}>Campeonatos</Link>
+                    <Link className={"nav-link"} to={'/jogos'}>Jogos</Link>
+                    {/*<Link className={"nav-link"} to={'/times'}>Times</Link>*/}
+                </Nav>
+                <Switch>
+                    <Route path="/campeonatos">
+                        <Campeonato/>
+                    </Route>
+                </Switch>
+            </Router>
         )
     }
 }
