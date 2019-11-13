@@ -1,6 +1,6 @@
 class CurlComponent {
 
-    baseUrl = "http://localhost";
+    baseUrl = "https://scout-volei.herokuapp.com/";
 
     _handleErrors(res) {
         if(!res.ok) throw new Error(res.statusText);
