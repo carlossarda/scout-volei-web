@@ -1,0 +1,14 @@
+.under-construction {
+    /*display: flex;*/
+}
+
+.jogos {
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+}
+
+.img {
+    height: 50%;
+    width: auto;
+}

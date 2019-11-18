@@ -1,0 +1,22 @@
+.campeonatos-cadastrados {
+    margin: 10px auto auto auto;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.campeonato-tr {
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.colunas-tabela  th {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: "ZCOOL KuaiLe";
+}
+
+.campeonato-tr td {
+    text-align: center;
+}
+
+.tabela-campeonato {
+    border-radius: 10px;
+}

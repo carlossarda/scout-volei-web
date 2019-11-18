@@ -1,0 +1,19 @@
+.formulario-campeonato {
+    margin: 10px auto auto auto;
+}
+
+.conteudo-formulario {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.botao-direita {
+    float: right;
+}
+
+.letras-form {
+    color: white;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bolder;
+}

@@ -1,0 +1,21 @@
+body {
+    background-image: url("/fundo.png");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+}
+
+.pg-inicial > .row {
+    margin: 0;
+}
+
+.pg-inicial > .cabecalho {
+    margin-top: 1em;
+}
+
+/*.pg-inicial {*/
+/*    padding: 0;*/
+/*}*/
+
+.root {
+
+}

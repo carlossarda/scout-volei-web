@@ -1,38 +1,39 @@
 import React, {Component} from 'react';
 import Table from "react-bootstrap/Table";
-import Curl from "./curl/CurlComponent";
+import Curl from "../curl/CurlComponent";
+import './campeonatos-cadastrados.css';
 
 class CampeonatosCadastradosComponent extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
-            campeonatos:[]
+            campeonatos: []
         };
     }
 
     componentDidMount() {
         let curl = new Curl();
         curl.get('/campeonatos')
-            .then( res => {
+            .then(res => {
                 this.setState({
-                    campeonatos : res
+                    campeonatos: res
                 });
-        });
-
+            });
     }
 
     render() {
         return (
-            <Table responsive striped hover size="sm" className={"col-md-6 " + this.props.propriedades}>
+            <Table responsive borderless={true} size="sm"
+                   className={"tabela-campeonato col-md-6 " + this.props.propriedades}>
                 <thead>
-                <tr>
+                <tr className={"colunas-tabela"}>
                     <th>Campeonato</th>
                     <th>Data Campeonato</th>
                 </tr>
                 </thead>
-                <tbody>
-                    <ListaCampeonatos campeonatos = {this.state.campeonatos} atualizados = {this.props.campeonatos}/>
+                <tbody className="">
+                <ListaCampeonatos campeonatos={this.state.campeonatos} atualizados={this.props.campeonatos}/>
                 </tbody>
             </Table>
         )
@@ -40,12 +41,12 @@ class CampeonatosCadastradosComponent extends Component {
 }
 
 function ListaCampeonatos(lista) {
-    let campeonatos =  lista.campeonatos;
-    if(lista.atualizados.campeonatos.length > lista.campeonatos.length){
+    let campeonatos = lista.campeonatos;
+    if (lista.atualizados.campeonatos.length > lista.campeonatos.length) {
         campeonatos = lista.atualizados.campeonatos;
     }
     return campeonatos.map(campeonato => {
-        return (<tr key={campeonato.id_campeonato}>
+        return (<tr key={campeonato.id_campeonato} className={"campeonato-tr"}>
             <td>{campeonato.nome}</td>
             <td>{campeonato.data}</td>
         </tr>);

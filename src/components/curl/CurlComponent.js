@@ -3,15 +3,16 @@ class CurlComponent {
     baseUrl = "https://scout-volei.herokuapp.com";
 
     _handleErrors(res) {
-        if(!res.ok) throw new Error(res.statusText);
+        if (!res.ok) throw new Error(res.statusText);
         return res;
     }
 
     get(url) {
-        return fetch(this.baseUrl + url,{
+        return fetch(this.baseUrl + url, {
             headers: {
-                'Content-type' : 'application/json;charset=UTF-8',
-                'Accept' : 'application/json'}
+                'Content-type': 'application/json;charset=UTF-8',
+                'Accept': 'application/json'
+            }
         })
             .then(res => this._handleErrors(res))
             .then(res => res.json());
@@ -19,7 +20,7 @@ class CurlComponent {
 
     post(url, dado) {
         return fetch(this.baseUrl + url, {
-            headers: { 'Content-type' : 'application/json;charset=UTF-8','Accept' : 'application/json'},
+            headers: {'Content-type': 'application/json;charset=UTF-8', 'Accept': 'application/json'},
             method: 'post',
             body: JSON.stringify(dado)
         })

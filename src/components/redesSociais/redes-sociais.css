@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap');
+
+.redes-sociais {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociais svg {
+    font-size: 2.7em;
+    padding-left: 10px;
+}
+
+.redes-sociais a {
+    color: white;
+}
+
+.redes-sociais a:hover {
+    color: white;
+}
+
+.redes-sociais a:active {
+    color: white;
+}
+
+.redes-sociais a:visited {
+    color: white;
+}
